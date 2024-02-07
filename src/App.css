@@ -1,38 +1,289 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:wght@300;400&display=swap');
+*{
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-fluid {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f4f4f4;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.user-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.input-box {
+  flex: calc(33.33% - 10px);
+  /* 50% width with a gap of 20px in between */
+}
+
+.details {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  background-color: #af4f4c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Additional styling for the gender dropdown */
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #555;
+}
+.title {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+  text-align: center;
+}
+.star {
+  color: red;
+}
+
+/*************************Table code****************************************/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.table-container{
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 98vw;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  h2{
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 }
+
+
+/***********************************************/
+.delete-confirmation-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+}
+
+.delete-confirmation-popup {
+  background: #fff; /* white background */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  height: 10rem;
+  width:20rem;
+  p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  div{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+}
+
+/* CSS */
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.button-3.yes {
+  background-color: #cf605a; /* Red color for "Yes" button */
+}
+
+.button-3.no {
+  background-color: #357e41; /* Green color for "No" button */
+}
+
+/**********************************************/
+
+/*****************************************************/
+.view-popup-content{
+  height: 25rem;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Add these styles to your CSS stylesheet */
+.view-popup-content .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.view-popup-content .grid-item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.view-popup-content .grid-item .label {
+  font-weight: bold;
+}
+
+.view-popup-content .grid-item .value {
+  margin-top: 5px;
+}
+
+/*****************************************************/
+
+
+/*************************************/
+.role-content{
+  width: 500px;
+}
+.role-table-container{
+  width: 80vw;
+}
+/*************************************/
+
+/***************************************/
+.right-table-container{
+  width: 60vw;
+}
+/***************************************/
+
+/****************************************/
+.configuration-table-container{
+  width: 40vw;
+}
+/***************************************/
+
+/* Adjust spacing for smaller screens */
+@media (max-width: 900px) {
+  .user-details {
+    flex-direction: column;
+  }
+}
+
+
+
